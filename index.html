@@ -12,34 +12,32 @@
     <p>Curated moments and memories.</p>
   </header>
 
-<main class="gallery" id="gallery"></main>
+  <!-- ✅ This is where photos will appear -->
+  <main class="gallery" id="gallery"></main>
 
-<script>
-  const images = [
-    "photo1.jpg",
-    "photo2.jpg",
-    "photo3.jpg",
-    "photo4.jpg"
-    "photo5.jpg"
-  ];
-
-  const gallery = document.getElementById("gallery");
-
-  images.forEach(file => {
-    const img = document.createElement("img");
-    img.src = `images/${file}`;
-    img.alt = file;
-    gallery.appendChild(img);
-  });
-</script>
-
-  
   <footer>
     <p>© 2025 Daud Sunuwar</p>
   </footer>
+
+  <!-- ✅ Add this JavaScript at the END of the body -->
+  <script>
+    const images = [
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg",
+      "photo4.jpg",
+      "photo5.jpg"
+      // Add more filenames here when needed
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    images.forEach(file => {
+      const img = document.createElement("img");
+      img.src = `images/${file}`;
+      img.alt = file;
+      gallery.appendChild(img);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
